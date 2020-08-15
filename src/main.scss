@@ -234,6 +234,10 @@ h1.title, h1.subtitle {
 main > .footer {
   padding: 3rem 2rem 4rem 2rem;
   background-color: #eeeeee;
+  hr {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
 }
 
 .hero, .section {
@@ -734,5 +738,16 @@ h5.subtitle {
   @include media-breakpoint-up(sm) {
     margin-bottom: -38%;
     transform: none;
+  }
+}
+.image-watching-tv {
+  &>* {
+    margin-top: -16%;
+  }
+  .section.is-medium & {
+    margin-left: -14%;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: -1rem;
+    }
   }
 }
