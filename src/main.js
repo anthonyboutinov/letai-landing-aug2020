@@ -7,6 +7,7 @@ $(document).ready(function(){
   // inlineIcons();
   onSubmitMainForm();
   enableAddressFormVisualEffects();
+  maskInputs();
 });
 
 function onSubmitMainForm() {
@@ -45,6 +46,12 @@ function displayResult(error) {
   } else {
     $("#main-form-result").removeClass("d-none");
   }
+}
+
+function maskInputs() {
+  $("#phone").mask("+7 (000) 000-0000");
+  $("#phone").attr("placeholder", "+7 (999) 999-9999");
+  // $('.rub-sign').html('₽');
 }
 
 function enableNavbarScrollBehavior() {
