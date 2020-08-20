@@ -26,9 +26,9 @@
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary justify-content-between">
     <div class="container">
       <a class="navbar-brand" href="#top">
-        <img src="@{themePath}images/letai-logo-white.svg" alt="Летай Мобильная связь" class="image responsive">
+        <img src="@{themePath}images/letai-logo-white.svg" alt="Летай — Мобильная связь" class="image responsive">
       </a>
-      <div class="form-inline d-flex d-sm-flex d-lg-none">
+      <div class="form-inline d-none d-sm-flex d-lg-none">
         <button data-toggle="modal" data-target="#main-modal" class="btn btn btn-light">Оставить
           <br class="d-none d-sm-inine">заявку</button>
       </div>
@@ -39,13 +39,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto mr-3">
           <li class="nav-item">
-            <a class="nav-link" href="#tariffs">Тарифы</a>
+            <a data-toggle="collapse" data-target="#navbarNav" class="nav-link" href="#tariffs">Тарифы</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a data-toggle="collapse" data-target="#navbarNav" class="nav-link" href="#check">Проверить адрес</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a data-toggle="collapse" data-target="#navbarNav" class="nav-link" href="#tv">Телевидение</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#howto">Как подключиться</a>
+            <a data-toggle="collapse" data-target="#navbarNav" class="nav-link" href="#howto">Как подключиться</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#move">Оборудование</a>
+            <a data-toggle="collapse" data-target="#navbarNav" class="nav-link" href="#equipment">Оборудование</a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <a data-toggle="collapse" data-target="#navbarNav" class="nav-link" href="#cctv">Видеонаблюдение</a>
           </li>
         </ul>
         <div class="form-inline d-none d-lg-flex">
@@ -59,30 +68,17 @@
 
     <section class="hero is-primary is-bold">
       <div class="container">
+        <div class="image image-family">
+          <img src="@{themePath}images/family.svg" alt="">
+        </div>
         <div class="row hero-primary-body">
-          <!-- <div class="col-sm">
-            <div class="image ml-n4 slide-left">
-              <img src="@{themePath}images/main_title1_1.png" alt="Новые тарифы «Много». Много интернета. Хватит на все!">
-            </div>
-          </div> -->
-          <!-- <div class="col-sm" style="align-self:flex-end; position:relative;">
-            <div class="image main-guy-text" data-tilt data-tilt-full-page-listening data-tilt-reverse="true" data-tilt-perspective="3000">
-              <img src="@{themePath}images/main_dop1_word_2.png" alt="" class="image">
-            </div>
-            <div class="image main-guy">
-              <img src="@{themePath}images/main_dop1_guy_1.png" alt="" class="image">
-            </div>
-          </div> -->
-          <div class="col-12 col-md-8">
+          <div class="col-12 col-lg-10 col-xl-8">
             <div class="title display-4">Подключим Интернет+ТВ
               <br>за&nbsp;один день или месяц за&nbsp;наш&nbsp;счет!</div>
           </div>
           <div class="col-md-4">
 
           </div>
-          <!-- <div class="col-12 col-md-4 offset-md-8">
-            <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light mt-4">Оставить заявку</button>
-          </div> -->
           <div class="col-12 d-flex justify-content-end">
             <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light mt-4 btn-centered">Оставить заявку</button>
           </div>
@@ -94,13 +90,13 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-sm stretch-items">
+          <div class="col-12 col-md-6 stretch-items">
             <div class="slab mb-4 mb-md-0">
-              <div class="row align-items-center-md">
-                <div class="col-4 col-md-auto">
-                  <div class="image is-100">
+              <div class="row align-items-center">
+                <div class="col-5 col-sm-4 col-md-auto">
+                  <div class="image is-100 image-stopwatch">
                     <!-- <img src="@{themePath}images/noun_fast_1692291.svg" alt=""> -->
-                    <img src="@{themePath}images/clock.svg" alt="">
+                    <img src="@{themePath}images/stopwatch.svg" alt="">
                   </div>
                 </div>
                 <div class="col">
@@ -111,16 +107,16 @@
             </div>
           </div>
 
-          <div class="col-sm stretch-items">
+          <div class="col-12 col-md-6 stretch-items">
             <div class="slab mb-4 mb-md-0">
               <div class="row align-items-center-md">
-                <div class="col-4 col-md-auto">
+                <div class="col-5 col-sm-4 col-md-auto">
                   <div class="image is-100">
                     <!-- <img src="@{themePath}images/noun_speed_3118142.svg" alt=""> -->
                     <img src="@{themePath}images/speedometer.svg" alt="">
                   </div>
                 </div>
-                <div class="col pl-0 pl-sm-2">
+                <div class="col">
                   <h4 class="title mb-0">Хотите быстрый интернет за&nbsp;разумную стоимость?</h4>
                   <!-- optional text here (rm .mb-0 in the title) -->
                 </div>
@@ -135,7 +131,7 @@
     <section class="section is-purple is-medium">
       <div class="container">
         <h2 class="title">Новая акция от Летай!</h2>
-        <p class="lead">Подключим интернет и ТВ за 1 день или подарим месяц бесплатного пользования</p>
+        <p class="lead">Подключим Интернет+ТВ за&nbsp;1&nbsp;день или подарим месяц бесплатного&nbsp;пользования</p>
       </div>
     </section>
 
@@ -168,11 +164,19 @@
               </div>
               <div class="col-sm text-lead">
                 Интернет 100 мбит/сек
+
+                <div class="d-lg-none mt-2">
+                  <!-- Вторая колонка информации на экранах sm отображается вместе с первой колоной -->
+                  <!-- [содержимое второй колонки] -->
+                </div>
+                <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg mt-4 d-lg-none">Выбрать тариф</button>
               </div>
-              <div class="col-sm text-lead">
+              <div class="col-sm text-lead d-none d-lg-block">
+                <!-- Вторая колонка информации: отображается в на экранах md+ -->
+                <!-- [содержимое второй колонки] -->
               </div>
-              <div class="col-sm">
-                <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg mt-4 mt-md-0">Оставить заявку</button>
+              <div class="col-sm d-none d-lg-flex">
+                <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg">Выбрать тариф</button>
               </div>
             </div>
           </div>
@@ -198,56 +202,63 @@
               </div>
               <div class="col-sm text-lead">
                 Интернет 100 мбит/сек
+
+                <div class="d-lg-none mt-2">
+                  <!-- Вторая колонка информации на экранах sm отображается вместе с первой колоной -->
+                  <span class="small">Ультра ТВ </span>
+                  <br> 160 каналов
+                  <br> (37 в HD)
+                </div>
+                <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg mt-4 d-lg-none">Выбрать тариф</button>
               </div>
-              <div class="col-sm text-lead">
+              <div class="col-sm text-lead d-none d-lg-block">
+                <!-- Вторая колонка информации: отображается в на экранах md+ -->
                 <span class="small">Ультра ТВ </span>
                 <br> 160 каналов
                 <br> (37 в HD)
               </div>
-              <div class="col-sm">
-                <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg mt-4 mt-md-0">Оставить заявку</button>
+              <div class="col-sm d-none d-lg-flex">
+                <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg">Выбрать тариф</button>
               </div>
             </div>
           </div>
 
-          <div class="collapse" id="tariffs-collapse">
-
-            <!-- TODO: Collapse content -->
-            Collapse...
-
-          </div>
+          <!-- <div class="collapse" id="tariffs-collapse">
+            <!- - Collapse content - ->
+            <div class="list-table-item">...</div>
+          </div> -->
           <!-- eof collapse -->
 
         </div>
         <!-- eof list-table -->
 
-        <button data-toggle="collapse" data-target="#tariffs-collapse" data-value="show" class="btn btn-lg btn-outline-primary">Показать все
+        <!-- <button data-toggle="collapse" data-target="#tariffs-collapse" data-value="show" class="btn btn-lg btn-outline-primary">Показать все
           <span class="d-none d-sm-inline">тарифы</span>
           <i class="--chevron-down"></i>
         </button>
         <button data-toggle="collapse" data-target="#tariffs-collapse" data-value="hide" class="btn btn-lg btn-outline-primary" style="display:none">Скрыть
           <i class="--chevron-up"></i>
-        </button>
+        </button> -->
       </div>
     </section>
 
     <section class="section is-medium is-primary">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-8 offset-sm-2 mb-4">
+          <div class="col-12 col-md-8 offset-md-2 mb-4">
             <div class="image">
               <img src="@{themePath}images/rocket-internet.svg" alt="">
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-sm-6 offset-sm-3">
+          <div class="col-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
             <!-- <div class="col col-sm-8 align-self-end"> -->
-            <h2 class="title">Стабильный и надежный интернет</h2>
+            <h2 class="title">Стабильный и надежный&nbsp;интернет</h2>
             <ul class="lead">
-              <li>Подключение по технологии «оптика в дом»</li>
+              <li>Подключение по технологии «оптика в&nbsp;дом»</li>
               <li>Только современное оборудование </li>
-              <li>С нами 500 000 тысяч абонентов</li>
+              <li>С нами 500&nbsp;000 абонентов</li>
             </ul>
           </div>
           <!-- <div class="col col-sm-4">
@@ -262,29 +273,73 @@
     </section>
 
     <section class="section is-medium is-grey">
+      <a id="check"></a>
       <div class="container">
-        <h2 class="title">Домашний Интернет и телевидение</h2>
-        <h4 class="subtitle">Проверьте свой адрес на наличие технической возможности подключения к услугам Летай</h4>
-        <form name="check-address" class="form-row" id="check-address">
-          <div class="form-group col col-sm-4">
-            <input type="text" class="form-control" id="city" name="city">
-            <label for="city" class="label-inside">Город</label>
+        <h2 class="title">Домашний интернет и&nbsp;телевидение</h2>
+        <h4 class="subtitle">Проверьте свой адрес на&nbsp;наличие технической возможности подключения к&nbsp;услугам&nbsp;Летай</h4>
+
+        <form name="check-address" id="check-address" class="has-label-inside-padding">
+          <div class="form-row">
+            <div class="form-group col-12 col-sm-4">
+              <input type="text" class="form-control" id="city" name="city" required>
+              <label for="city" class="label-inside">Город</label>
+            </div>
+            <div class="form-group col-12 col-sm-4">
+              <input type="text" class="form-control" id="street" name="street" required>
+              <label for="street" class="label-inside">Улица</label>
+            </div>
+            <div class="form-group col-6 col-sm-2">
+              <input type="text" class="form-control" id="building" name="building" required>
+              <label for="building" class="label-inside">Дом</label>
+            </div>
+            <div class="form-group col-6 col-sm-2">
+              <input type="text" class="form-control" id="apartment" name="apartment">
+              <label for="apartment" class="label-inside">Квартира</label>
+            </div>
           </div>
-          <div class="form-group col col-sm-4">
-            <input type="text" class="form-control" id="street" name="street">
-            <label for="street" class="label-inside">Улица</label>
-          </div>
-          <div class="form-group col-6 col-sm-2">
-            <input type="text" class="form-control" id="building" name="building">
-            <label for="building" class="label-inside">Дом</label>
-          </div>
-          <div class="form-group col-6 col-sm-2">
-            <input type="text" class="form-control" id="apartment" name="apartment">
-            <label for="apartment" class="label-inside">Квартира</label>
+          <div class="row mt-md-4 justify-content-center align-items-baseline">
+            <div class="form-group col-12 col-sm-6 col-md-auto">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="private-house" name="private-house">
+                <label for="private-house" class="form-check-label pr-md-3">Частный дом</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-auto">
+              <button class="btn btn-primary btn-md btn-centered" name="submit" type="submit">
+                <span class="text">Проверить</span>
+                <span class="spinner d-none">
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  <span class="sr-only">Поиск...</span>
+                </span>
+              </button>
+            </div>
           </div>
         </form>
-        Частный дом. Проверить
-        <div class="text-center lead text-success"></div>
+
+        <div class="alert alert-danger mt-4 d-none" id="check-address-form-result-error">
+          <h3 class="title">Что-то пошло не так</h3>
+          <div class="alert-body">
+            <p>Пожалуйста, свяжитесь с&nbsp;нами&nbsp;само&shy;стоятельно:
+              <br>
+              <a href="tel:+78432222222" class="lead">(843)&nbsp;222&#8209;22&#8209;22</a>
+            </p>
+          </div>
+        </div>
+        <div class="alert alert-info mt-4 d-none" id="check-address-form-result-negative">
+          <h3 class="title">Мы проверили ваш адрес</h3>
+          <div class="alert-body">
+            <p>Необходимо дополнительное обследование по&nbsp;Вашему адресу. Хотите, чтобы наш специалист связался с&nbsp;Вами для уточнения возможности&nbsp;подключения?</p>
+            <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-primary mt-4 mt-md-0">Оставить заявку</button>
+          </div>
+        </div>
+        <div class="alert alert-success mt-4 d-none" id="check-address-form-result-positive">
+          <h3 class="title">Ура! Мы можем подключить Вас к&nbsp;этому адресу в&nbsp;течение 24&nbsp;часов</h3>
+          <div class="alert-body">
+            <p>Отправьте заявку на подключение, и мы перезвоним.</p>
+            <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-primary mt-4 mt-md-0">Подключиться</button>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -296,8 +351,8 @@
         <h2 class="display-4 title">Кешбек 20% с&nbsp;мобильной связи «Летай»</h2>
         <!-- </div> -->
         <!-- <div class="col-12 col-sm-4 align-self-end lead"> -->
-        <p>25% от платежей за мобильную связь «Летай» возвращается на счет проводных уcлуг Таттелеком.</p>
-        <p>Подключите по USSD
+        <p>25% от платежей за&nbsp;мобильную связь «Летай» возвращается на&nbsp;счет проводных уcлуг&nbsp;Летай.</p>
+        <p>Подключите по&nbsp;USSD
           <code>
             <a href="tel:*116*111#">*116*111#</a>
           </code>
@@ -308,14 +363,15 @@
     </section>
 
     <section class="section is-medium is-primary">
+      <a id="tv"></a>
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-12 col-sm-8">
+          <div class="col-12 col-md-7 col-lg-8">
             <div class="image image-section-fullheight image-watching-tv">
-              <img src="@{themePath}images/watching-tv.svg" alt="">
+              <img src="@{themePath}images/watching-tv-recolored.svg" alt="">
             </div>
           </div>
-          <div class="col-12 col-sm-4 lead">
+          <div class="col-12 col-md-5 col-lg-4 lead">
             <ul>
               <li>120 цифровых каналов</li>
               <li>40 HD каналов</li>
@@ -336,41 +392,43 @@
           </div>
         </div> -->
         <div class="text-center lead position-relative">
-          <span class="subtitle">ТВ + 100 Мбит Интернет&nbsp;за&nbsp;395&nbsp;руб</span>
-          <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light ml-0 ml-sm-4 mt-4 mt-sm-0">Подключиться</button>
+          <span class="subtitle">ТВ + 100 Мбит Интернет&nbsp;за&nbsp;395&nbsp;₽ в&nbsp;месяц</span>
+          <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light ml-0 ml-lg-4 mt-4 mt-lg-0">Подключиться</button>
         </div>
       </div>
     </section>
 
     <section class="section is-medium">
+      <a id="howto"></a>
       <div class="container">
-        <h2 class="title">Подключить Интернет и Телевидение от Таттелеком лекго</h2>
+        <h2 class="title">Подключить Интернет и Телевидение от&nbsp;Летай&nbsp;лекго</h2>
         <ol class="gradient-list lead mt-4">
-          <li>Нажмите кнопку «Оставить заявку»</li>
-          <li>Оператор перезвонит вам в течении 15 минут</li>
-          <li>Определите удобное время, когда придет специалист по подключению</li>
-          <li>Начните пользоваться сразу после подключения</li>
+          <li>Нажмите кнопку «Оставить&nbsp;заявку»</li>
+          <li>Оператор перезвонит вам в течении 15&nbsp;минут</li>
+          <li>Определите удобное время, когда придет специалист по&nbsp;подключению</li>
+          <li>Начните пользоваться сразу после&nbsp;подключения</li>
         </ol>
-        <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-blue mt-5 btn-centered">Подключить за один день</button>
+        <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-blue mt-5 btn-centered">Подключить за&nbsp;один&nbsp;день</button>
         <div class="hint-forbtn">или месяц пользования за наш счет</div>
       </div>
     </section>
 
     <section class="section is-medium is-purple">
+      <a id="equipment"></a>
       <div class="container">
         <div class="row align-items-end">
-          <div class="col-12 col-sm-7 lead">
+          <div class="col-12 col-md-5 order-md-2">
+            <div class="image mb-4 mb-md-0">
+              <img src="@{themePath}images/router.svg" alt="">
+            </div>
+          </div>
+          <div class="col-12 col-md-7 order-md-1 lead">
             <h2 class="title">Мощный Wi-Fi роутер</h2>
             <ul>
               <li>Одновременная работа в&nbsp;двух диапазонах: 2.4 ГГц и 5 ГГц —&nbsp;работает на свободной&nbsp;частоте</li>
               <li>Мощный Wi-Fi модуль со&nbsp;стабильным сигналом и большим радиусом&nbsp;действия</li>
             </ul>
             <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-outline-light mt-3">Узнать подробнее</button>
-          </div>
-          <div class="col-12 col-sm-5">
-            <div class="image">
-              <img src="@{themePath}images/router.svg" alt="">
-            </div>
           </div>
         </div>
       </div>
@@ -402,7 +460,7 @@
           </div>
           <div class="col-12 col-sm-4 stretch-items">
             <div class="slab is-outlined mb-4 mb-md-0">
-              <h4 class="title mb-4">Роутер не нужен</h4>
+              <h4 class="title mb-4">Роутер не&nbsp;нужен</h4>
             </div>
           </div>
         </div>
@@ -411,21 +469,23 @@
     </section>
 
     <section class="section is-medium is-purple">
+      <a id="cctv"></a>
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-5">
+        <div class="row align-items-end">
+          <div class="col-12 col-md-5">
             <div class="image image-camera">
-              <img src="@{themePath}images/camera-down@2x-80.jpg" alt="" class="d-block d-sm-none">
-              <img src="@{themePath}images/camera@2x-80.jpg" alt="" class="d-none d-sm-block">
+              <!-- <img src="@{themePath}images/camera-down@2x-80.jpg" alt="" class="d-block d-md-none">
+              <img src="@{themePath}images/camera@2x-80.jpg" alt="" class="d-none d-md-block"> -->
+              <img src="@{themePath}images/cctv.svg" alt="">
             </div>
           </div>
-          <div class="col-12 col-sm-6 offset-sm-1">
+          <div class="col-12 col-md-6 offset-md-1">
             <h5 class="subtitle">Все подключившиеся к&nbsp;Летай получают&nbsp;бесплатно</h5>
             <h2 class="title">Доступ к&nbsp;видеонаблюдению «Безопасный&nbsp;Двор»</h2>
             <ul class="lead">
               <li>Доступ к камерам через Личный кабинет</li>
-              <li>Более 100 000 камер по РТ</li>
-              <li>Бесплатный архив на 7 дней</li>
+              <li>Более 100&nbsp;000 камер&nbsp;по&nbsp;РТ</li>
+              <li>Бесплатный архив на&nbsp;7&nbsp;дней</li>
             </ul>
           </div>
         </div>
@@ -438,13 +498,14 @@
 
           <div class="col-sm-12 col-md-6 section-questions-content">
             <h2 class="title">Остались вопросы?</h2>
-            <h4 class="title">Оставьте заявку и наши менеджеры проконсультируют Вас по тарифному плану</h4>
+            <h4 class="title">Оставьте заявку, и наши менеджеры проконсультируют Вас по&nbsp;тарифному&nbsp;плану</h4>
             <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light mt-4 mt-md-0">Оставить заявку</button>
           </div>
 
           <div class="col-sm-12 col-md-6 section-questions-bg">
-            <div class="image image-section-fullheight">
-              <img src="@{themePath}images/questions3_1-min.png" alt="">
+            <div class="image image-support-guy">
+              <!-- <img src="@{themePath}images/questions3_1-min.png" alt=""> -->
+              <img src="@{themePath}images/support-guy.svg" alt="">
             </div>
           </div>
         </div>
@@ -455,7 +516,8 @@
     <footer class="footer">
       <div class="container">
         <h4 class="title">Подробные условия акции</h4>
-        <p class="">Акция анонсирует возможность потребителям подключить услуги ШПД в&nbsp;кратчайшие сроки: за&nbsp;один день. В&nbsp;случае задержек в&nbsp;подключении со&nbsp;стороны Таттелеком, клиент получает месяц бесплатного обслуживания в&nbsp;подарок. Регламентированный срок подключения: в&nbsp;течение 24 часов с&nbsp;момента оставления&nbsp;заявки.</p>
+        <p>Акция анонсирует возможность потребителям подключить услуги ШПД в&nbsp;кратчайшие сроки: за&nbsp;один день. В&nbsp;случае задержек в&nbsp;подключении со&nbsp;стороны Летай, клиент получает месяц бесплатного обслуживания в&nbsp;подарок. Регламентированный
+          срок подключения: в&nbsp;течение 24 часов с&nbsp;момента оставления&nbsp;заявки.</p>
 
         <hr>
 

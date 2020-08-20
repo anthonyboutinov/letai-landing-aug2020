@@ -112,6 +112,12 @@ module.exports = function(grunt) {
         ],
         tasks: ['replace:serve', 'sass:serve'],
       },
+      img: {
+        files: [
+          'src/images/**/*'
+        ],
+        tasks: ['copy:serveImg'],
+      },
     },
 
     connect: {

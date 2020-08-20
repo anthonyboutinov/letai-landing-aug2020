@@ -200,6 +200,7 @@ h1.title, h1.subtitle {
 
 .section {
   padding: 3rem 0rem;
+
   &.is-medium {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -220,15 +221,24 @@ h1.title, h1.subtitle {
       // }
     }
   }
-  @include media-breakpoint-up(md) {
-    padding-left:2rem;
-    padding-right: 2rem;
-  }
+
   &>a[id] {
     position: absolute;
     left: 0;
-    top: 1px;
+    top: -14rem;
   }
+
+  @include media-breakpoint-up(md) {
+    padding-left:2rem;
+    padding-right: 2rem;
+
+    &>a[id] {
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+
 }
 
 main > .footer {
@@ -242,21 +252,20 @@ main > .footer {
 
 .hero, .section {
   &.is-primary {
-    background-color: var(--primary);
+    background-color: $brand-primary;
     color: white;
 
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
   &.is-orange {
-    background-color: var(--orange);
+    background-color: $brand-primary;
     color: white;
   }
   &.is-primary.is-bold {
-    background-image: url("@{themePath}images/main_bg1_2.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: $brand-primary;
+    background: linear-gradient(to bottom,  #e33512 0%,#f26921 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e33512', endColorstr='#f26921',GradientType=0 );
     background-color: #ea490f;
   }
   &.is-purple {
@@ -353,35 +362,21 @@ main > .footer {
   }
 }
 
-// .slab {
-//   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-//   // margin: 10px 10px 10px 10px;
-//   padding: 1rem;
-//   border-radius: 1rem;
-//   display: flex;
-//   align-items: stretch;
-//
-//   @include media-breakpoint-up(md) {
-//     padding: 2rem;
-//     padding-top: 8rem;
-//     padding-bottom: 3rem;
-//   }
-//
-//   .image {
-//     // margin-right: 2rem;
-//     // margin-left: 1rem;
-//   }
-//
-//   &.is-primary {
-//     background-image: linear-gradient(157deg, #f26921, #e45620);
-//     box-shadow: 0px 2px 1.125rem 0px rgba(228, 86, 32, 0.45);
-//     color: white;
-//   }
-//   &.is-light {
-//     background-image: linear-gradient(157deg, lighten($brand-grey, 65%), lighten($brand-grey, 45%));
-//     box-shadow: 0px 2px 1.125rem 0px rgba(0, 0, 0, 0.1);
-//   }
-// }
+.alert {
+  border: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &-body {
+    max-width: 40em;
+  }
+}
+
+#navbarNav {
+  @include media-breakpoint-down(md) {
+    padding-top: 2rem;
+  }
+}
 
 .slab {
   display: flex;
@@ -394,7 +389,11 @@ main > .footer {
   }
 
   @include media-breakpoint-up(md) {
-    padding: 2rem;
+    padding: 2rem 0;
+
+    &.is-outlined {
+      padding: 2rem;
+    }
   }
 }
 
@@ -424,17 +423,35 @@ img {
 .hero-primary-body {
   position: relative;
   z-index: 2;
+  @include media-breakpoint-down(sm) {
+    margin-top: -3rem;
+    .title {
+      margin-bottom: 52vw;
+    }
+    .btn {
+      margin-bottom: -4rem;
+    }
+  }
 }
 
-.main-guy {
-  position: relative;
-  z-index: 2;
-}
-.main-guy-text {
+.image-family {
+  left: -50%;
+  right: -7%;
+  bottom: -5.1rem;
+
   position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
+  z-index: 0;
+
+  @include media-breakpoint-up(md) {
+    left: 0;
+    right: 0;
+    bottom: -5.1rem;
+  }
+  @include media-breakpoint-up(lg) {
+    left: 7%;
+    right: 7%;
+    bottom: -5.1rem;
+  }
 }
 
 .tariff-title {
@@ -455,7 +472,12 @@ img {
   .price {
     font-size: 3.5rem;
     line-height: 3rem;
-    padding-right: 0.8rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .price-value {
+    line-height: 1.1;
+    transform: translateY(0.05em);
   }
 }
 
@@ -553,25 +575,26 @@ img {
     }
   }
 
-  .image img.parallax-layer, .back-floating-letters img {
-    width: auto;
-    max-width: initial;
-    height: 100%;
-  }
-
-  .main-guy, .main-guy-text {
-    width: 147vw;
-    margin-left: -12vw;
-  }
-
-  .section-move-bg-img {
-    position: absolute;
-    right: -32vw;
-    transform: translateY(19vw);
-  }
+  // .image img.parallax-layer, .back-floating-letters img {
+  //   width: auto;
+  //   max-width: initial;
+  //   height: 100%;
+  // }
+  //
+  // .main-guy, .main-guy-text {
+  //   width: 147vw;
+  //   margin-left: -12vw;
+  // }
+  //
+  // .section-move-bg-img {
+  //   position: absolute;
+  //   right: -32vw;
+  //   transform: translateY(19vw);
+  // }
 
   .section-questions-bg {
-    transform: translate(26vw);
+    // transform: translate(26vw);
+    transform: translate(19vw);
     z-index: 1;
     position: relative;
   }
@@ -584,14 +607,13 @@ img {
   }
 }
 
-// .crossed-in {
-//   position: absolute;
-//   transform: translate3d(0,-3rem, 0);
-// }
+.has-label-inside-padding {
+  padding-top: 1.33rem;
+}
 
 .crossed-out {
   opacity: 0.7;
-  // margin-top: 3rem;
+  transform: scale(0.7) translate(0.48em, -0.15em);
 
   &:after,
   &:before {
@@ -622,25 +644,35 @@ img {
   padding: 0.3em 1.1em;
   position: absolute;
   transform: translateY(-2.1rem);
-  color: var(--brandGrey);
-  transition: transform 0.5s;
+  color: #888;
+  transition: transform 0.5s, opacity 0.2s, color 0.4s;
   font-size: 0.85em;
 
-  input[data-hasvalue]+&, input:focus+&, input:hover+& {
-    transform: translateY(0);
+  input[data-hasvalue]+& {
+    opacity: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    input[data-hasvalue]+&, input:focus+&, input:hover+& {
+      transform: translateY(-4.3rem);
+      opacity: 1;
+      color: var(--brand-grey);
+    }
   }
 }
 
-#city {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-#street, #building {
-  border-radius: 0;
-}
-#apartment {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+@include media-breakpoint-up(sm) {
+  #city {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #street, #building {
+    border-radius: 0;
+  }
+  #apartment {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 
@@ -733,11 +765,13 @@ h5.subtitle {
 }
 
 .image-camera {
-  transform: translateX(35%);
-  margin-bottom: 2rem;
-  @include media-breakpoint-up(sm) {
-    margin-bottom: -38%;
-    transform: none;
+  transform: translateX(22%);
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+  @include media-breakpoint-up(md) {
+    margin-bottom: -2rem;
+    margin-top: -2rem;
+    transform: scaleX(-1);
   }
 }
 .image-watching-tv {
@@ -750,4 +784,20 @@ h5.subtitle {
       margin-bottom: -1rem;
     }
   }
+}
+
+.image-stopwatch {
+  margin-top: -12%;
+}
+
+.image-support-guy {
+  margin-bottom: -5rem;
+  margin-top: -2rem;
+}
+
+.form-group>.form-check {
+  padding-left: 2.5rem;
+}
+.form-group .form-check-label {
+  margin-left: 0.4rem;
 }
