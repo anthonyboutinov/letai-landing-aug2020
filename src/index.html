@@ -60,6 +60,9 @@
         <div class="form-inline d-none d-lg-flex">
           <button data-toggle="modal" data-target="#main-modal" class="btn btn-md btn-light mt-4 mt-md-0">Оставить заявку</button>
         </div>
+        <div class="form-inline d-flex d-sm-none">
+          <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-outline-light mt-4 mt-md-0">Оставить заявку</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -69,13 +72,18 @@
     <section class="hero is-primary is-bold">
       <div class="container">
         <div class="image image-family">
-          <img src="@{themePath}images/family.svg" alt="">
+          <img src="@{themePath}images/family-mobile.svg" alt="" class="d-md-none">
+          <img src="@{themePath}images/family.svg" alt="" class="d-none d-md-block">
         </div>
         <div class="row hero-primary-body">
           <div class="col-12 col-lg-10 col-xl-8">
-            <div class="title display-4">Подключим<br>Интернет+ТВ за&nbsp;1&nbsp;день,<br>или месяц за&nbsp;наш&nbsp;счет!</div>
+            <div class="title display-4">
+              Подключим
+              <br>Интернет+ТВ за&nbsp;1&nbsp;день,
+              <br class="d-inline d-sm-none d-md-inline">или месяц за&nbsp;наш&nbsp;счет!
+            </div>
           </div>
-          <!-- <div class="col-12 d-flex justify-content-end">
+          <!-- <div class="col-12 d-flex d-sm-none">
             <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light mt-4 btn-centered">Оставить заявку</button>
           </div> -->
         </div>
@@ -84,6 +92,9 @@
 
     <section class="section">
       <div class="container">
+
+        <!-- <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-primary mb-5 btn-centered d-block d-sm-none">Оставить заявку</button> -->
+
         <div class="row">
 
           <div class="col-12 col-md-6 stretch-items">
@@ -161,14 +172,14 @@
               <div class="col-sm text-lead">
                 Интернет 100 мбит/сек
 
-                <div class="d-lg-none mt-2">
+                <div class="d-xl-none mt-2">
                   <!-- Вторая колонка информации на экранах sm отображается вместе с первой колоной -->
                   <!-- [содержимое второй колонки] -->
                 </div>
                 <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg mt-4 d-lg-none">Выбрать тариф</button>
               </div>
-              <div class="col-sm text-lead d-none d-lg-block">
-                <!-- Вторая колонка информации: отображается в на экранах md+ -->
+              <div class="col-sm text-lead d-none d-xl-block">
+                <!-- Вторая колонка информации: отображается в на экранах xl+ -->
                 <!-- [содержимое второй колонки] -->
               </div>
               <div class="col-sm d-none d-lg-flex">
@@ -199,7 +210,7 @@
               <div class="col-sm text-lead">
                 Интернет 100 мбит/сек
 
-                <div class="d-lg-none mt-2">
+                <div class="d-xl-none mt-2">
                   <!-- Вторая колонка информации на экранах sm отображается вместе с первой колоной -->
                   <span class="small">Ультра ТВ </span>
                   <br> 160 каналов
@@ -207,8 +218,8 @@
                 </div>
                 <button data-toggle="modal" data-target="#main-modal" class="btn btn-info btn-lg mt-4 d-lg-none">Выбрать тариф</button>
               </div>
-              <div class="col-sm text-lead d-none d-lg-block">
-                <!-- Вторая колонка информации: отображается в на экранах md+ -->
+              <div class="col-sm text-lead d-none d-xl-block">
+                <!-- Вторая колонка информации: отображается в на экранах xl+ -->
                 <span class="small">Ультра ТВ </span>
                 <br> 160 каналов
                 <br> (37 в HD)
@@ -344,7 +355,7 @@
       <div class="container lead">
         <!-- <div class="row"> -->
         <!-- <div class="col-12 col-sm-8"> -->
-        <h2 class="display-4 title">Кешбек 20% с&nbsp;мобильной связи «Летай»</h2>
+        <h2 class="display-4 title">Кешбек 20% с&nbsp;мобильной связи&nbsp;«Летай»</h2>
         <!-- </div> -->
         <!-- <div class="col-12 col-sm-4 align-self-end lead"> -->
         <p>20% от платежей за&nbsp;мобильную связь «Летай» возвращается на&nbsp;счет проводных уcлуг&nbsp;«Летай».</p>
@@ -388,7 +399,7 @@
             <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light mt-4 mt-md-0">Подключиться</button>
           </div>
         </div> -->
-        <div class="text-center lead position-relative mt-md-4 mt-xl-0">
+        <div class="text-center lead position-relative mt-4 mt-xl-0">
           <span class="subtitle">ТВ + 100 Мбит Интернет&nbsp;за&nbsp;395&nbsp;₽ в&nbsp;месяц</span>
           <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light ml-0 ml-lg-4 mt-4 mt-lg-0">Подключиться</button>
         </div>
@@ -398,13 +409,77 @@
     <section class="section is-medium">
       <a id="howto"></a>
       <div class="container">
-        <h2 class="title">Подключить Интернет и Телевидение от&nbsp;«Летай»&nbsp;лекго</h2>
-        <ol class="gradient-list lead mt-4">
+        <h2 class="title">Подключить интернет и&nbsp;телевидение от&nbsp;«Летай»&nbsp;лекго</h2>
+        <!-- <ol class="gradient-list lead mt-4">
           <li>Нажмите кнопку «Оставить&nbsp;заявку»</li>
           <li>Оператор перезвонит вам в течении 15&nbsp;минут</li>
           <li>Определите удобное время, когда придет специалист по&nbsp;подключению</li>
           <li>Начните пользоваться сразу после&nbsp;подключения</li>
-        </ol>
+        </ol> -->
+        <div class="row mt-4">
+
+          <div class="col-12 col-md-5">
+            <div class="grid-tile">
+              <div class="row align-items-center mb-3">
+                <div class="col-auto">
+                  <h1 class="title mb-0 text-primary">Шаг 1</h1>
+                </div>
+                <div class="col">
+                  <div class="image is-45">
+                    <img src="@{themePath}images/icon-click.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="text-lead">Нажмите кнопку «Оставить&nbsp;заявку»</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-7">
+            <div class="grid-tile">
+              <div class="row align-items-center mb-3">
+                <div class="col-auto">
+                  <h1 class="title mb-0 text-primary">Шаг 2</h1>
+                </div>
+                <div class="col">
+                  <div class="image is-45">
+                    <img src="@{themePath}images/icon-customer-service.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="text-lead">Оператор перезвонит вам в&nbsp;течении 15&nbsp;минут</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-7">
+            <div class="grid-tile">
+              <div class="row align-items-center mb-3">
+                <div class="col-auto">
+                  <h1 class="title mb-0 text-primary">Шаг 3</h1>
+                </div>
+                <div class="col">
+                  <div class="image is-45">
+                    <img src="@{themePath}images/icon-on-time-delivery.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="text-lead">Определите удобное время,<br>когда&nbsp;придет специалист по&nbsp;подключению</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="grid-tile">
+              <div class="row align-items-center mb-3">
+                <div class="col-auto">
+                  <h1 class="title mb-0 text-primary">Готово!</h1>
+                </div>
+                <div class="col">
+                  <div class="image is-45">
+                    <img src="@{themePath}images/icon-check.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="text-lead">Начните пользоваться сразу после&nbsp;подключения</div>
+            </div>
+          </div>
+
+        </div>
 
         <div class="row mt-5 align-items-center justify-content-center">
           <div class="col-12 col-md-auto">
@@ -481,14 +556,14 @@
       <a id="cctv"></a>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4 col-lg-3 align-self-center">
+          <div class="col-8 offset-4 offset-md-0 col-md-4 col-lg-3 align-self-center offset-lg-1 offset-xl-2">
             <div class="image image-camera">
               <!-- <img src="@{themePath}images/camera-down@2x-80.jpg" alt="" class="d-block d-md-none">
               <img src="@{themePath}images/camera@2x-80.jpg" alt="" class="d-none d-md-block"> -->
               <img src="@{themePath}images/cctv.svg" alt="">
             </div>
           </div>
-          <div class="col-12 col-md-7 offset-md-1 offset-lg-1 col-lg-8">
+          <div class="col-12 col-md-7 offset-md-1 offset-lg-1 col-lg-7 col-xl-6">
             <h5 class="subtitle">Все подключившиеся к&nbsp;«Летай» получают&nbsp;бесплатно</h5>
             <h2 class="title">Доступ к&nbsp;видеонаблюдению «Безопасный&nbsp;Двор»</h2>
             <ul class="lead">
@@ -525,7 +600,7 @@
     <footer class="footer">
       <div class="container">
         <h4 class="title">Подробные условия акции</h4>
-        <p>Акция анонсирует возможность потребителям подключить услуги ШПД в&nbsp;кратчайшие сроки: за&nbsp;один день. В&nbsp;случае задержек в&nbsp;подключении со&nbsp;стороны «Летай», клиент получает месяц бесплатного обслуживания в&nbsp;подарок. Регламентированный
+        <p>Акция анонсирует возможность потребителям подключить услуги ШПД в&nbsp;кратчайшие сроки: за&nbsp;1 день. В&nbsp;случае задержек в&nbsp;подключении со&nbsp;стороны «Летай», клиент получает месяц бесплатного обслуживания в&nbsp;подарок. Регламентированный
           срок подключения: в&nbsp;течение 24 часов с&nbsp;момента оставления&nbsp;заявки.</p>
 
         <hr>
@@ -587,7 +662,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> -->
   <script src="@{themePath}main.js"></script>
 

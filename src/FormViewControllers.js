@@ -19,8 +19,9 @@ class FormViewController {
   }
 
   enterLoadingState() {
-    this.submitButton.width(`${this.submitButton.width()}px`);
-    this.submitButton.attr("disabled", true);
+    this.submitButton
+      .attr("disabled", true)
+      .width(`${this.submitButton.width()}px`);
     this.submitButton.find(".text").addClass("d-none");
     this.submitButton.find(".spinner").removeClass("d-none");
   }
@@ -28,8 +29,9 @@ class FormViewController {
   leaveLoadingState() {
     this.submitButton.find(".text").removeClass("d-none");
     this.submitButton.find(".spinner").addClass("d-none");
-    this.submitButton.width(false);
-    this.submitButton.attr("disabled", null);
+    this.submitButton
+      .width(false)
+      .attr("disabled", null);
   }
 
   get form() {
@@ -59,11 +61,11 @@ class MainFormViewController extends FormViewController {
     // TODO: send the form with an ajax call...
 
     // TODO: remove the timeout, this goes inside the callback function
-    setTimeout(function (error = null) {
-        // error = null; // TODO: remove this
+    setTimeout(function(error = null) {
+      // error = null; // TODO: remove this
 
-        self.leaveLoadingState();
-        self.displayResult(error);
+      self.leaveLoadingState();
+      self.displayResult(error);
     }, 500);
   }
 
@@ -99,7 +101,7 @@ class CheckAddressFormViewController extends FormViewController {
     // TODO: send the form with an ajax call...
 
     // TODO: remove the timeout, this goes inside the callback function
-    setTimeout(function (error = null) {
+    setTimeout(function(error = null) {
       const result = true; // true -- адрес найден, false -- адрес не найден
 
       self.leaveLoadingState();
