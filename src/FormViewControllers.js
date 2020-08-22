@@ -100,7 +100,7 @@ class CheckAddressFormViewController extends FormViewController {
 
     // TODO: remove the timeout, this goes inside the callback function
     setTimeout(function (error = null) {
-      const result = false; // true -- адрес найден, false -- адрес не найден
+      const result = true; // true -- адрес найден, false -- адрес не найден
 
       self.leaveLoadingState();
       self.displayResult(error, result);

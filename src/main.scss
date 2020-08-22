@@ -369,6 +369,11 @@ main > .footer {
 
   &-body {
     max-width: 40em;
+    @include media-breakpoint-up(sm) {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -423,6 +428,9 @@ img {
 .hero-primary-body {
   position: relative;
   z-index: 2;
+  .title {
+    margin-bottom: 13rem;
+  }
   @include media-breakpoint-down(sm) {
     margin-top: -3rem;
     .title {
@@ -466,6 +474,10 @@ img {
     position: relative;
     p {
       margin-bottom: 0.5rem;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid #f1ad91;
     }
   }
 
@@ -780,6 +792,9 @@ h5.subtitle {
   }
   .section.is-medium & {
     margin-left: -14%;
+    @include media-breakpoint-down(md) {
+      margin-bottom: -2rem;
+    }
     @include media-breakpoint-down(sm) {
       margin-bottom: -1rem;
     }
@@ -800,4 +815,10 @@ h5.subtitle {
 }
 .form-group .form-check-label {
   margin-left: 0.4rem;
+}
+
+ul, p {
+  .container &:last-child {
+    margin-bottom: 0;
+  }
 }
