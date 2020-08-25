@@ -51,12 +51,21 @@ class FormViewController {
 class MainFormViewController extends FormViewController {
   constructor() {
     super("form[name='main-form']");
+    this.enableChooseHardwareOnClickLogic();
   }
 
   sendForm() {
     // Этот метод вызывается из form.on(submit, ...) сразу после enterLoadingState
 
     const self = this;
+
+    // Варианты оборудования:
+    // 'buy-router' -- купить роутер
+    // 'installment-plan' -- роутер в рассрочку
+    // 'no-router' -- роутер не нужен
+    // null -- пользователь не совершал никакого выбора
+    const chooseHardwareOption = $($("[data-choose-hardware]").toArray().find(option => $(option).hasClass("is-active"))).attr("data-choose-hardware") || null;
+    console.log({chooseHardwareOption});
 
     // TODO: send the form with an ajax call...
 
@@ -82,6 +91,15 @@ class MainFormViewController extends FormViewController {
     } else {
       $("#main-form-result").removeClass("d-none");
     }
+  }
+
+  enableChooseHardwareOnClickLogic() {
+    $(document).on('click', '[data-choose-hardware]', function(event) {
+      $("[data-choose-hardware]").each(function() {
+        $(this).removeClass("is-active");
+      });
+      $(this).addClass("is-active");
+    });
   }
 }
 

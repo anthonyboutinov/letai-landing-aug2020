@@ -13,13 +13,14 @@ $enable-responsive-font-sizes: true;
 $brand-primary: #e45620;
 $body-color: #3a3a3a;
 $brand-grey: #565759;
+$purple: #463497;
 
 $theme-colors: (
   "primary": $brand-primary,
   "orange": $brand-primary,
   "blue": #0281c8,
   "info": #0281c8,
-  "purple": #463497,
+  "purple": $purple,
   "red": #e3350f,
   "navbarInit": #e33512,
   "brandGrey": #565759,
@@ -271,7 +272,7 @@ main > .footer {
     background-color: #ea490f;
   }
   &.is-purple {
-    background-color: var(--purple);
+    background-color: $purple;
     color: white;
   }
   &.is-light {
@@ -396,9 +397,24 @@ main > .footer {
   align-items: stretch;
   flex-direction: column;
   padding: 1rem;
+  transition: box-shadow 0.2s;
 
   &.is-outlined {
-    border: 2px solid lighten(#463497, 40%);
+    border: 2px solid lighten($purple, 40%);
+  }
+
+  &.is-selectable:not(.is-active) {
+    cursor: pointer;
+    &:hover, &:focus {
+      box-shadow: lighten($purple, 40%) 0 0 1rem;
+    }
+  }
+
+  &.is-active {
+    box-shadow: $purple 0 0 1rem;
+    .title {
+      color: $purple;
+    }
   }
 
   @include media-breakpoint-up(md) {
