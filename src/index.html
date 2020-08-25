@@ -2,12 +2,12 @@
 <html lang="ru">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" href="@{themePath}main.css">
 
+  <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="@{themePath}favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="@{themePath}favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="@{themePath}favicon/favicon-16x16.png">
@@ -17,6 +17,7 @@
   <meta name="msapplication-TileColor" content="#e45620">
   <meta name="msapplication-config" content="@{themePath}favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <!-- eof favicon -->
 
   <title>Летай — Мобильная связь</title>
 </head>
@@ -69,7 +70,7 @@
 
   <main>
 
-    <section class="hero is-primary is-bold">
+    <section class="hero is-primary is-bold" itemscope itemtype="http://schema.org/Offer">
       <div class="container">
         <div class="image image-family">
           <img src="@{themePath}images/family-mobile.svg" alt="" class="d-md-none">
@@ -77,7 +78,7 @@
         </div>
         <div class="row hero-primary-body">
           <div class="col-12 col-lg-10 col-xl-8">
-            <div class="title display-4">
+            <div class="title display-4" itemprop="description">
               Подключим
               <br>Интернет+ТВ за&nbsp;1&nbsp;день,
               <br class="d-inline d-sm-none d-md-inline">или месяц за&nbsp;наш&nbsp;счет!
@@ -93,8 +94,6 @@
     <section class="section">
       <div class="container">
 
-        <!-- <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-primary mb-5 btn-centered d-block d-sm-none">Оставить заявку</button> -->
-
         <div class="row">
 
           <div class="col-12 col-md-6 stretch-items">
@@ -102,13 +101,11 @@
               <div class="row align-items-center">
                 <div class="col-5 col-sm-4 col-md-auto">
                   <div class="image is-100 image-stopwatch">
-                    <!-- <img src="@{themePath}images/noun_fast_1692291.svg" alt=""> -->
                     <img src="@{themePath}images/stopwatch.svg" alt="">
                   </div>
                 </div>
                 <div class="col">
                   <h4 class="title mb-0">Нужно срочно подключить интернет?</h4>
-                  <!-- optional text here (rm .mb-0 in the title) -->
                 </div>
               </div>
             </div>
@@ -119,13 +116,11 @@
               <div class="row align-items-center-md">
                 <div class="col-5 col-sm-4 col-md-auto">
                   <div class="image is-100">
-                    <!-- <img src="@{themePath}images/noun_speed_3118142.svg" alt=""> -->
                     <img src="@{themePath}images/speedometer.svg" alt="">
                   </div>
                 </div>
                 <div class="col">
                   <h4 class="title mb-0">Хотите быстрый интернет за&nbsp;разумную стоимость?</h4>
-                  <!-- optional text here (rm .mb-0 in the title) -->
                 </div>
               </div>
             </div>
@@ -135,32 +130,28 @@
       </div>
     </section>
 
-    <section class="section is-purple is-medium">
+    <section class="section is-purple is-medium" itemscope itemtype="http://schema.org/Offer">
       <div class="container">
-        <h2 class="title">Новая акция от «Летай»!</h2>
-        <p class="lead">Подключим Интернет+ТВ за&nbsp;1&nbsp;день или подарим месяц бесплатного&nbsp;пользования</p>
+        <h2 class="title" itemprop="name">Новая акция от «Летай»!</h2>
+        <p class="lead" itemprop="description">Подключим Интернет+ТВ за&nbsp;1&nbsp;день или подарим месяц бесплатного&nbsp;пользования</p>
       </div>
     </section>
 
 
 
-    <section class="section is-medium">
+    <section class="section is-medium" itemscope itemtype="http://schema.org/ItemList">
       <a id="tariffs"></a>
       <div class="container">
-        <h2 class="title text-primary">Тарифы</h2>
+        <h2 class="title text-primary" itemprop="name">Тарифы</h2>
         <div class="list-table mb-4">
 
-          <div class="list-table-item">
-            <!-- <div class="hot">
-              <span>
-                <small>Хит продаж</small>
-              </span>
-            </div> -->
+          <div class="list-table-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+            <!-- <div class="hot"> <span> <small>Хит продаж</small> </span> </div> -->
             <div class="row align-items-baseline">
               <div class="col-sm">
-                <h3 class="title tariff-title mb-4">«Про100»</h3>
+                <h3 class="title tariff-title mb-4" itemprop="name">«Про100»</h3>
                 <div class="row no-gutters mb-3 mb-sm-0">
-                  <div class="col-auto price">
+                  <div class="col-auto price" itemprop="price">
                     360
                   </div>
                   <div class="col price-value">
@@ -169,7 +160,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm text-lead">
+              <div class="col-sm text-lead" itemprop="description">
                 Интернет 100 мбит/сек
 
                 <div class="d-xl-none mt-2">
@@ -188,12 +179,12 @@
             </div>
           </div>
 
-          <div class="list-table-item">
+          <div class="list-table-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
             <div class="row align-items-baseline">
               <div class="col-sm">
-                <h3 class="title tariff-title mb-4">«Интернет100+ТВ»</h3>
+                <h3 class="title tariff-title mb-4" itemprop="name">«Интернет100+ТВ»</h3>
                 <div class="row no-gutters mb-3 mb-sm-0">
-                  <div class="col-auto price crossed-in">
+                  <div class="col-auto price crossed-in" itemprop="price">
                     395
                   </div>
                 </div>
@@ -207,7 +198,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm text-lead">
+              <div class="col-sm text-lead" itemprop="description">
                 Интернет 100 мбит/сек
 
                 <div class="d-xl-none mt-2">
@@ -258,24 +249,19 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-            <!-- <div class="col col-sm-8 align-self-end"> -->
-            <h2 class="title">Стабильный и надежный&nbsp;интернет</h2>
-            <ul class="lead">
+        <div class="row" itemscope itemtype="http://schema.org/Offer">
+          <div class="col-12 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            <h2 class="title" itemprop="name">Стабильный и надежный&nbsp;интернет, который выдержит нагрузку*
+              <br>
+              <span class="text-muted small">* проверено «самоизоляцией»</span>
+            </h2>
+            <ul class="lead" itemprop="description">
               <li>Подключение по технологии «оптика в&nbsp;дом»</li>
               <li>Только современное оборудование </li>
-              <li>С нами 500&nbsp;000 абонентов</li>
+              <li>С нами более 600&nbsp;000 абонентов</li>
             </ul>
           </div>
-          <!-- <div class="col col-sm-4">
-            <div class="image image-section-fullheight mt-n4">
-              <img src="@{themePath}images/img-strong.png" alt="">
-            </div>
-          </div> -->
         </div>
-
-        <!-- <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-info">Стать абонентом</button> -->
       </div>
     </section>
 
@@ -350,26 +336,21 @@
       </div>
     </section>
 
-    <section class="section is-medium is-purple">
-      <!-- <a id="move"></a> -->
+    <section class="section is-medium is-purple" itemscope itemtype="http://schema.org/Offer">
       <div class="container lead">
-        <!-- <div class="row"> -->
-        <!-- <div class="col-12 col-sm-8"> -->
-        <h2 class="display-4 title">Кешбек 20% с&nbsp;мобильной связи&nbsp;«Летай»</h2>
-        <!-- </div> -->
-        <!-- <div class="col-12 col-sm-4 align-self-end lead"> -->
-        <p>20% от платежей за&nbsp;мобильную связь «Летай» возвращается на&nbsp;счет проводных уcлуг&nbsp;«Летай».</p>
-        <p>Подключите по&nbsp;USSD
-          <code>
-            <a href="tel:*116*111#">*116*111#</a>
-          </code>
-        </p>
-        <!-- </div> -->
-      </div>
+        <h2 class="display-4 title" itemprop="name">Кэшбэк 20% с&nbsp;мобильной связи&nbsp;«Летай»</h2>
+        <div itemprop="description">
+          <p>20% от платежей за&nbsp;мобильную связь «Летай» возвращается на&nbsp;счет проводных уcлуг&nbsp;«Летай».</p>
+          <p>Подключите по&nbsp;USSD
+            <code>
+              <a href="tel:*116*111#">*116*111#</a>
+            </code>
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="section is-medium is-primary">
+    <section class="section is-medium is-primary" itemscope itemtype="http://schema.org/Offer">
       <a id="tv"></a>
       <div class="container">
         <div class="row align-items-center">
@@ -379,8 +360,8 @@
             </div>
           </div>
           <div class="col-12 col-md-12 col-lg-6 col-xl-5 lead">
-            <h2 class="title">Телевидение от&nbsp;«Летай»</h2>
-            <ul>
+            <h2 class="title" itemprop="name">Телевидение от&nbsp;«Летай»</h2>
+            <ul itemprop="description">
               <li>120 цифровых каналов</li>
               <li>40 HD каналов</li>
               <li>Ultra HD</li>
@@ -391,14 +372,6 @@
             </ul>
           </div>
         </div>
-        <!-- <div class="row align-items-baseline lead">
-          <div class="col-auto">
-            <div class="subtitle">ТВ+100 Мбит интернет за 395 руб</div>
-          </div>
-          <div class="col-auto">
-            <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light mt-4 mt-md-0">Подключиться</button>
-          </div>
-        </div> -->
         <div class="text-center lead position-relative mt-4 mt-xl-0">
           <span class="subtitle">ТВ + 100 Мбит Интернет&nbsp;за&nbsp;395&nbsp;₽ в&nbsp;месяц</span>
           <button data-toggle="modal" data-target="#main-modal" class="btn btn-lg btn-light ml-0 ml-lg-4 mt-4 mt-lg-0">Подключиться</button>
@@ -410,12 +383,6 @@
       <a id="howto"></a>
       <div class="container">
         <h2 class="title">Подключить интернет и&nbsp;телевидение от&nbsp;«Летай»&nbsp;лекго</h2>
-        <!-- <ol class="gradient-list lead mt-4">
-          <li>Нажмите кнопку «Оставить&nbsp;заявку»</li>
-          <li>Оператор перезвонит вам в течении 15&nbsp;минут</li>
-          <li>Определите удобное время, когда придет специалист по&nbsp;подключению</li>
-          <li>Начните пользоваться сразу после&nbsp;подключения</li>
-        </ol> -->
         <div class="row mt-4">
 
           <div class="col-12 col-md-5">
@@ -460,7 +427,8 @@
                   </div>
                 </div>
               </div>
-              <div class="text-lead">Определите удобное время,<br>когда&nbsp;придет специалист по&nbsp;подключению</div>
+              <div class="text-lead">Определите удобное время,
+                <br>когда&nbsp;придет специалист по&nbsp;подключению</div>
             </div>
           </div>
           <div class="col-12 col-md-5">
@@ -480,6 +448,7 @@
           </div>
 
         </div>
+        <!-- eof .row -->
 
         <div class="row mt-5 align-items-center justify-content-center">
           <div class="col-12 col-md-auto">
@@ -497,7 +466,7 @@
       </div>
     </section>
 
-    <section class="section is-medium is-purple">
+    <section class="section is-medium is-purple" itemscope itemtype="http://schema.org/Offer">
       <a id="equipment"></a>
       <div class="container">
         <div class="row">
@@ -507,8 +476,8 @@
             </div>
           </div>
           <div class="col-12 col-md-7 order-md-1 lead align-self-end">
-            <h2 class="title">Мощный Wi-Fi роутер</h2>
-            <ul>
+            <h2 class="title" itemprop="name">Мощный Wi-Fi роутер</h2>
+            <ul itemprop="description">
               <li>Одновременная работа в&nbsp;двух диапазонах: 2.4 ГГц и 5 ГГц —&nbsp;работает на свободной&nbsp;частоте</li>
               <li>Мощный Wi-Fi модуль со&nbsp;стабильным сигналом и большим радиусом&nbsp;действия</li>
             </ul>
@@ -552,24 +521,23 @@
       </div>
     </section>
 
-    <section class="section is-medium is-purple">
+    <section class="section is-medium is-purple" itemscope itemtype="http://schema.org/Offer">
       <a id="cctv"></a>
       <div class="container">
         <div class="row">
           <div class="col-8 offset-4 offset-md-0 col-md-4 col-lg-3 align-self-center offset-lg-1 offset-xl-2">
             <div class="image image-camera">
-              <!-- <img src="@{themePath}images/camera-down@2x-80.jpg" alt="" class="d-block d-md-none">
-              <img src="@{themePath}images/camera@2x-80.jpg" alt="" class="d-none d-md-block"> -->
               <img src="@{themePath}images/cctv.svg" alt="">
             </div>
           </div>
           <div class="col-12 col-md-7 offset-md-1 offset-lg-1 col-lg-7 col-xl-6">
-            <h5 class="subtitle">Все подключившиеся к&nbsp;«Летай» получают&nbsp;бесплатно</h5>
-            <h2 class="title">Доступ к&nbsp;видеонаблюдению «Безопасный&nbsp;Двор»</h2>
-            <ul class="lead">
+            <!-- <h5 class="subtitle">Все подключившиеся к&nbsp;«Летай» получают&nbsp;бесплатно</h5> -->
+            <h2 class="title" itemprop="name">Доступ к&nbsp;видео&shy;наблюдению «Безопасный&nbsp;Двор»</h2>
+            <ul class="lead" itemprop="description">
               <li>Доступ к камерам через Личный&nbsp;кабинет</li>
               <li>Более 100&nbsp;000 камер&nbsp;по&nbsp;РТ</li>
               <li>Бесплатный архив на&nbsp;7&nbsp;дней</li>
+              <li>Услуга предоставляется при&nbsp;наличии камер по&nbsp;адресу&nbsp;подключения</li>
             </ul>
           </div>
         </div>
@@ -588,8 +556,8 @@
 
           <div class="col-sm-12 col-md-6 section-questions-bg">
             <div class="image image-support-guy">
-              <!-- <img src="@{themePath}images/questions3_1-min.png" alt=""> -->
-              <img src="@{themePath}images/support-guy.svg" alt="">
+              <img src="@{themePath}images/questions3_1-min.png" alt="">
+              <!-- <img src="@{themePath}images/support-guy.svg" alt=""> -->
             </div>
           </div>
         </div>
