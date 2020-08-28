@@ -22,7 +22,7 @@ $theme-colors: (
   "info": #0281c8,
   "purple": $purple,
   "red": #e3350f,
-  "navbarInit": #e33512,
+  "navbarInit": #e8600a,
   "brandGrey": #565759,
 );
 
@@ -784,4 +784,9 @@ ul, p {
   .container &:last-child {
     margin-bottom: 0;
   }
+}
+
+.hero.is-primary {
+  padding: 0;
+  background: linear-gradient(180deg,#e33512 0,#f26921);
 }
